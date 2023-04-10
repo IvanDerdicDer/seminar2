@@ -1,14 +1,14 @@
-\chapter{Teorija}
+\chapter{Teorija} \label{chapter:teorija}
 U ovom poglavlju se obrađuje teorija Jezerskog Skladišta Podataka. U ovom
 poglavlju dana je definicija Jezerskog Skladišta Podataka, te su opisani
 sljedeći slojevi:
 \begin{itemize}
     \item Sloj Unosa Podataka,
-    \item Sloj Obrade Podataka,
-    \item Sloj Pohrane Podataka.
+    \item Sloj Pohrane Podataka,
+    \item Sloj Obrade Podataka.
 \end{itemize}
 
-\section{Jezersko Skladište Podataka}
+\section{Jezersko Skladište Podataka} \label{section:jezersko_skladiste_podataka}
 Jezersko Skladište Podataka (eng. Data Lakehouse) je arhitektura skladištenja
 podataka koja kombinira karakteristike Jezera Podataka (eng. Data Lake) i
 Skladišta Podataka (eng. Data Warehousea). To je centralizirano skladište
@@ -19,4 +19,57 @@ olakšava upravljanje podacima, smanjuje troškove i vrijeme potrebno za priprem
 podataka za analizu. Ova arhitektura skladištenja podataka postaje sve
 popularnija u posljednje vrijeme jer olakšava analizu podataka, izvještavanje i
 donošenje odluka u stvarnom vremenu. Za detaljniji opis Jezerskog Skladišta
-Podataka vidjeti \citep{datalakehouse2022}.
+Podataka vidjeti \cite[c.2]{datalakehouse2022}.
+
+\section{Sloj Unosa Podataka} \label{section:sloj_unosa_podataka}
+Sloj Unosa Podataka (engl. Data Ingestion Layer) u Jezerskom Skladištu Podataka
+je sloj koji se koristi za prikupljanje i spremanje podataka iz različitih
+izvora u Jezersko Skladište Podataka. Ovaj sloj obuhvaća dva načina prikupljanja
+podataka:
+\begin{enumerate}
+    \item serijsko prikupljanje podataka,
+    \item strujno prikupljanje podataka.
+\end{enumerate}
+
+Sloj Unosa Podataka omogućuje podatkovnim inženjerima da učinkovito prikupe
+podatke iz različitih izvora i formata, poput baza podataka, datoteka ili
+senzorskih uređaja, te ih jednostavno učitaju u Jezersko Skladište Podataka.
+Ovaj sloj obično uključuje alate za obradu velikih količina podataka, poput
+Apache Spark-a, kako bi se omogućilo brzo i učinkovito prikupljanje i spremanje
+velikih količina podataka. Za detaljni opis Sloja Unosa Podataka vidjeti
+\cite[c.2.2.1]{datalakehouse2022}.
+
+\section{Sloj Pohrane Podataka} \label{section:sloj_pohrane_podataka}
+U Jezerskom Skladištu Podataka, Sloj Pohrane Podataka obuhvaća skup tehnologija
+i alata za pohranu velikih količina podataka u različitim formatima, kao što su
+Apache Hadoop Distributed File System (HDFS), Amazon S3, Azure Blob Storage i
+Google Cloud Storage.
+
+Osim toga, Delta Lake tehnologija može se koristiti kao sloj pohrane podataka u
+Jezerskom Skladištu, jer omogućuje verzioniranje podataka, upravljanje
+transakcijama i omogućuje pohranu podataka u strukturiranom obliku, čime se
+olakšava proces analize.
+
+Sloj pohrane podataka u Jezerskom Skladištu Podataka mora biti dizajniran i
+konfiguriran na način koji omogućuje brzi i jednostavan pristup podacima za
+analizu, uz osiguravanje pouzdanosti, sigurnosti i skalabilnosti skladišta. Za
+detaljni opis Sloja Pohrane Podataka vidjeti \cite[c.2.2.2]{datalakehouse2022}.
+
+\section{Sloj Obrade Podataka} \label{section:sloj_obrade_podataka}
+Sloj Obrade Podataka (eng. Data Processing Layer) u Jezerskom Skladištu Podataka
+odnosi se na skup tehnologija i alata koji omogućuju obradu velikih količina
+podataka pohranjenih u Jezerskom Skladištu Podataka. Ovaj sloj obično uključuje
+distribuirane obradne okvire, poput Apache Sparka, Apache Flinka i Apache Beam-a
+, te različite servise za obradu podataka kao što su Apache Hive, Apache Pig,
+Apache Sqoop i Apache Storm.
+
+Sloj Obrade Podataka je dizajniran kako bi omogućio izvođenje različitih
+operacija na podacima, uključujući čišćenje, transformiranje, spajanje i
+agregiranje. Ovaj sloj omogućuje korisnicima da lako i učinkovito izvode složenu
+obradu velikih skupova podataka, koristeći alate za distribuiranu obradu.
+
+Sloj Obrade Podataka u Jezerskom Skladištu Podataka igra ključnu ulogu u
+omogućavanju pouzdane, skalabilne i brze obrade podataka pohranjenih u Jezerskom
+Skladištu Podataka, što omogućuje korisnicima da izvuku vrijednost iz podataka i
+donose informirane poslovne odluke. Za detaljni opis Sloja Obrade Podataka
+vidjeti \cite[c.2.2.3]{datalakehouse2022}.
