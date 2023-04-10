@@ -1,0 +1,48 @@
+\chapter{Tehnologija}
+U ovom poglavlju se obrađuju tehnologije koje se koriste za ostvarivanje slojeva
+Jezerskog Skladišta Podataka. U ovom poglavlju opisane su sljedeće tehnologije:
+\begin{itemize}
+    \item Apache Spark,
+    \item Delta Lake.    
+\end{itemize}
+
+\section{Spark}
+Spark je distribuirani okvir za obradu podataka otvorenog koda koji je
+dizajniran za brzu i jednostavnu obradu velikih količina podataka. Spark
+omogućava programerima da razviju složene aplikacije za obradu podataka i
+analizu u nekoliko programskih jezika, uključujući Java, Python, Scala i R.
+
+Spark je popularan zbog svoje sposobnosti da brzo i jednostavno obradi velike
+količine podataka izvršavanjem na grozdu. Osim toga, Spark pruža mnoge
+biblioteke i alate za obradu podataka, uključujući Spark SQL, Spark Streaming,
+MLlib i GraphX.
+
+Spark se često koristi u industriji za obradu podataka u stvarnom vremenu,
+strojno učenje, obradu teksta, obradu slika i druga područja primjene. Spark je
+postao popularan zbog svoje brzine obrade podataka, skalabilnosti i
+fleksibilnosti u korištenju. Za detaljniji opis Spark-a vidjeti poglavlje 1 iz
+\cite[c.1]{spark2020}.
+
+\section{Delta Lake}
+Delta Lake je open source projekt koji se temelji na Apache Spark-u, a
+namijenjen je upravljanju i obradi podataka u velikim i složenim analitičkim
+aplikacijama. Delta Lake kombinira karakteristike Data Lake-a i skladišta
+podataka (Data Warehouse-a) u jednoj platformi koja je skalabilna, otporna na
+pogreške i sposobna za rad u realnom vremenu.
+
+Delta Lake omogućuje pohranu podataka u obliku tabela, s podrškom za transakcije
+i verzioniranje. To omogućuje korisnicima da jednostavno dodaju, ažuriraju ili
+brišu podatke, dok se istovremeno održava povijest promjena.
+
+Delta Lake također pruža podršku za naprednu obradu podataka, poput upravljanja
+s vremenom, verzioniranja shema i upravljanja sinkronizacijom podataka. Ove
+značajke olakšavaju integraciju s drugim alatima i aplikacijama, što je korisno
+u velikim poduzećima s kompleksnim IT okruženjima.
+
+Delta Lake se često koristi u poslovima koji zahtijevaju brzu obradu podataka u
+stvarnom vremenu i velike količine podataka, poput bankarstva, telekomunikacija,
+e-trgovine i drugih industrija koje se bave velikim količinama podataka.
+
+Delta Lake je tehnologija za upravljanje i obradu podataka koja se može
+koristiti u sklopu Jezerskog Skladišta Podataka. Može se koristiti za
+ostvarivanje Sloja Pohrane Podataka. Za detaljniji opis Delta Lake-a vidjeti \citep{deltalake2023}
