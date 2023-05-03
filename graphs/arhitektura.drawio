@@ -1,0 +1,49 @@
+<mxfile host="Electron" modified="2023-05-03T18:47:36.615Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="XBiv-KQ9dQvsjvzuWTFr" version="21.1.2" type="device">
+  <diagram name="Page-1" id="d_iJ2oPxwbvJGMUVquvD">
+    <mxGraphModel dx="2058" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=1;fontSize=16;strokeWidth=2;strokeColor=#000000;" parent="1" source="7Nm6dNAUkO0t19-iMq1e-1" target="7Nm6dNAUkO0t19-iMq1e-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=16;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="200" y="320" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Sloj Unosa Podataka&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="215" y="320" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-3" value="Serijsko prikupljanje podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="240" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-4" value="Strujno prikupljanje podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="240" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontStyle=1;fontSize=16;strokeWidth=2;strokeColor=#000000;" parent="1" source="7Nm6dNAUkO0t19-iMq1e-5" target="7Nm6dNAUkO0t19-iMq1e-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=16;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="440" y="380" width="470" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-7" value="Sloj Pohrane Podataka" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="577.5" y="380" width="195" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-8" value="Brončani sloj" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcc99;strokeColor=#000000;fontSize=16;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="457.5" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-9" value="Srebrni sloj" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#000000;fontSize=16;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="615" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-10" value="Zlatni sloj" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#000000;fontSize=16;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="772.5" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=1;fontSize=16;strokeWidth=2;strokeColor=#000000;" parent="1" source="7Nm6dNAUkO0t19-iMq1e-11" target="7Nm6dNAUkO0t19-iMq1e-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7Nm6dNAUkO0t19-iMq1e-11" value="Sloj Obrade Podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="600" y="585" width="150" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
