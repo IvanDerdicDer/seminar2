@@ -1,12 +1,14 @@
-\chapter{Tehnologija}
+\chapter{Tehnologija} \label{chapter:tehnologija}
 U ovom poglavlju se obrađuju tehnologije koje se koriste za ostvarivanje slojeva
-Jezerskog Skladišta Podataka. U ovom poglavlju opisane su sljedeće tehnologije:
+Jezerskog Skladišta Podataka u ovom radu. Jezersko Skladište Podataka ne
+definira tehnologije koje se koriste za ostvarivanje slojeva, već samo slojeve i
+njihove funkcionalnosti. U ovom poglavlju opisane su sljedeće tehnologije:
 \begin{itemize}
     \item Apache Spark,
     \item Delta Lake.    
 \end{itemize}
 
-\section{Spark}
+\section{Spark} \label{section:spark}
 Spark je distribuirani okvir za obradu podataka otvorenog koda koji je
 dizajniran za brzu i jednostavnu obradu velikih količina podataka. Spark
 omogućava programerima da razviju složene aplikacije za obradu podataka i
@@ -25,9 +27,9 @@ fleksibilnosti u korištenju.
 Spark se u Jezerskom Skladištu Podataka može koristiti za ostvarivanje Sloja
 Unosa Podataka (vidi poglavlje~(\ref{section:sloj_unosa_podataka})) i Sloja
 Obrade Podataka (vidi poglavlje~(\ref{section:sloj_obrade_podataka})). Za
-detaljniji opis Spark-a vidjeti poglavlje 1 iz \cite[c.1]{spark2020}.
+detaljniji opis Spark-a vidjeti poglavlje 1 iz \cite{spark2020}.
 
-\section{Delta Lake}
+\section{Delta Lake} \label{section:delta_lake}
 Delta Lake je open source projekt koji se temelji na Apache Spark-u, a
 namijenjen je upravljanju i obradi podataka u velikim i složenim analitičkim
 aplikacijama. Delta Lake kombinira karakteristike Data Lake-a i skladišta

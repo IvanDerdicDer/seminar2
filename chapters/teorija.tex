@@ -90,7 +90,7 @@ vidjeti \cite{datalakehouse2022}.
 \section{Arhitektura i tok podataka} \label{section:arhitektura_i_tok_podataka}
 
 Arhitektura Jezerskog Skladišta Podataka prikazana je na
-slici~(\ref{fig:datalakehouse_architecture}). Ona proizlazi iz slojeva opisanih
+slici~(\ref{figure:datalakehouse_architecture}). Ona proizlazi iz slojeva opisanih
 u
 poglavljima~(\ref{section:sloj_unosa_podataka}),~(\ref{section:sloj_pohrane_podataka})
 i~(\ref{section:sloj_obrade_podataka}). Sloj Unosa Podataka samo upisuje podatke
@@ -103,10 +103,10 @@ podslojevi (Brončani, Srebrni i Zlatni Sloj) Sloja Pohrane Podataka.
     \centering
     \includegraphics[width=0.8\textwidth]{images/arhitektura.drawio.png}
     \caption{Arhitektura modela Jezerskog Skladišta Podataka.}
-    \label{fig:datalakehouse_architecture}
+    \label{figure:datalakehouse_architecture}
 \end{figure}
 
-Sa slike~(\ref{fig:datalakehouse_data_flow}) se vidi da postoji tok podataka
+Sa slike~(\ref{figure:datalakehouse_data_flow}) se vidi da postoji tok podataka
 između Slojeva Unosa, Pohrane i Obrade Podataka. Sloj Unosa Podataka upisuje
 podatke iz vanjske okoline (baze podataka, SFTP serveri, Jezera Podataka) u Sloj
 Pohrane Podataka. Unosom podataka se dobivaju Sirovi podaci koje Sloj Obrade
@@ -120,5 +120,5 @@ sloja te ih agregira i unosi u Zlatni sloj.
     \centering
     \includegraphics[width=0.8\textwidth]{images/tok_podataka.drawio.png}
     \caption{Tok podataka u Jezerskom Skladištu Podataka.}
-    \label{fig:datalakehouse_data_flow}
+    \label{figure:datalakehouse_data_flow}
 \end{figure}

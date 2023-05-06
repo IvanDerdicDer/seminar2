@@ -1,6 +1,15 @@
 \documentclass[times, utf8, seminar, numeric]{fer}
 \usepackage{booktabs}
 \usepackage{hyperref}
+\usepackage{forest}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Programski kod}
+
+\hypersetup{
+    colorlinks=true, 
+    linkcolor=blue,
+    urlcolor=cyan,
+}
 
 \begin{document}
 
@@ -23,6 +32,8 @@ Uvod rada. Nakon uvoda dolaze poglavlja u kojima se obrađuje tema.
 \input{chapters/teorija.tex}
 
 \input{chapters/tehnologija.tex}
+
+\input{chapters/primjer}
 
 \chapter{Zaključak}
 Zaključak.
