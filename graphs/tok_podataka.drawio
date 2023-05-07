@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-05-03T20:08:45.950Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="QGSUITFfsty4pPOdNIsz" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-05-07T18:08:32.087Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="wq1E0b--kbfK_kZhejLM" version="21.1.2" type="device">
   <diagram name="Page-1" id="YLCfDutQDyc-TqsNyLrV">
     <mxGraphModel dx="2058" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-1" target="EPxH7OCtS1ZbczJpQmrx-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EPxH7OCtS1ZbczJpQmrx-1" value="Sloj Unosa Podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+        <mxCell id="EPxH7OCtS1ZbczJpQmrx-1" value="Sloj unosa podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="80" y="360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-2" target="EPxH7OCtS1ZbczJpQmrx-4" edge="1">
@@ -19,7 +19,7 @@
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-4" target="EPxH7OCtS1ZbczJpQmrx-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EPxH7OCtS1ZbczJpQmrx-4" value="Sloj Obrade Podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+        <mxCell id="EPxH7OCtS1ZbczJpQmrx-4" value="Sloj obrade podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="400" y="360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-6" target="EPxH7OCtS1ZbczJpQmrx-8" edge="1">
@@ -38,7 +38,7 @@
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-8" target="EPxH7OCtS1ZbczJpQmrx-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EPxH7OCtS1ZbczJpQmrx-8" value="Sloj Obrade Podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+        <mxCell id="EPxH7OCtS1ZbczJpQmrx-8" value="Sloj obrade podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="80" y="460" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-10" target="EPxH7OCtS1ZbczJpQmrx-12" edge="1">
@@ -50,7 +50,7 @@
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="EPxH7OCtS1ZbczJpQmrx-12" target="EPxH7OCtS1ZbczJpQmrx-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EPxH7OCtS1ZbczJpQmrx-12" value="Sloj Obrade Podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
+        <mxCell id="EPxH7OCtS1ZbczJpQmrx-12" value="Sloj obrade podataka" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;strokeWidth=2;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="400" y="460" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="EPxH7OCtS1ZbczJpQmrx-14" value="Zlatni sloj" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#000000;fontSize=16;fontStyle=1;strokeWidth=2;" parent="1" vertex="1">

@@ -1,20 +1,20 @@
 \chapter{Primjer} \label{chapter:primjer}
 
-U ovom poglavlju prikazan je primjer izrade Jezerskog Skladišta Podataka i toka
-podatak definiranog u poglavlju~(\ref{section:arhitektura_i_tok_podataka}). Za
-ostvarivanje Sloja Obrade Podataka korišten je Apache Spark
-(poglavlje~(\ref{section:spark})), a za ostvarivanje Sloja Skladištenja Podataka
+U ovom poglavlju prikazan je primjer izrade jezerskog skladišta podataka i toka
+podataka definiranog u poglavlju~(\ref{section:arhitektura_i_tok_podataka}). Za
+ostvarivanje sloja obrade podataka korišten je Apache Spark
+(poglavlje~(\ref{section:spark})), a za ostvarivanje sloja skladištenja podataka
 korišten je Delta Lake (poglavlje~(\ref{section:delta_lake})). Za ostvarivanje
-Sloja Unosa Podata mogao se koristiti Apache Airflow, Azure Data Factory ili
-neki slični alat. U ovom primjeru nije realiziran Sloj Unosa Podataka pošto bi
+sloja unosa podata mogao se koristiti Apache Airflow, Azure Data Factory ili
+neki slični alat. U ovom primjeru nije realiziran sloj unosa podataka jer bi
 se sveo na kopiranje podataka iz jednog direktorija u drugi. U nastavku je
-opisan postupak izrade Jezerskog Skladišta Podataka i dimenzijskog modela
+opisan postupak izrade jezerskog skladišta podataka i dimenzijskog modela
 podataka.
 
 \section{Opis zadatka} \label{section:opis_zadatka}
 
-Kreirati Jezersko Skladište Podataka i dimenzijski model podataka za analizu
-iz podataka sa sljedećom strukturom:
+Izraditi jezersko skladište podataka i dimenzijski model podataka (vidjeti
+\citep{dimensionalmodel2023}) za analizu iz podataka sa sljedećom strukturom:
 \begin{description}
     \item[date] datum,
     \item[name] tekst,
@@ -24,22 +24,22 @@ iz podataka sa sljedećom strukturom:
     \item[colour] tekst,
     \item[currency] tekst.      
 \end{description}
-Dana struktura podataka je struktura sirovih podataka. Sirovi podaci su kreirani
+Dana struktura podataka je struktura sirovih podataka. Sirovi podaci su generirani
 pomoću stranice \href{https://generatedata.com/}{\textit{generatedata.com}}. Sirovi
-podaci su u CSV formatu i nalaze se u datoteci \texttt{sample\_data.csv} u
+podaci su u formatu CSV i nalaze se u datoteci \texttt{sample\_data.csv} u
 direktoriju \texttt{data} kako je prikazano na
-slici~(\ref{figure:lakehouse_directory_structure}). Potrebno je kreirati
-brončani, srebrni i zlatni sloj Jezerskog Skladišta Podataka. U brončani sloj
-treba učitati sirove podatke, kojima je su dodana polja `batch\_date' i
+slici~(\ref{figure:lakehouse_directory_structure}). Potrebno je izraditi
+brončani, srebrni i zlatni sloj jezerskog skladišta podataka. U brončani sloj
+treba učitati sirove podatke, kojima su dodana polja `batch\_date' i
 `input\_file'. U srebrni sloj treba učitati podatke iz brončanog sloja i
 kreirati dimenzijske tablice `colour', `country' i `person' i činjeničnu
 tablicu `fact\_table'. U zlatni sloj treba učitati podatke iz srebrnog sloja i
 kreirati činjenične tablice `most\_bought\_colour\_per\_month', `person\_spent'
-i `spent\_per\_day'. Također, za tablice `spent\_per\_day' treba kreirati i
-vizualizaciju podataka. Konačno Jezersko Skladište Podataka bi trebalo imati
+i `spent\_per\_day'. Također, za tablice `spent\_per\_day' treba napraviti i
+vizualizaciju podataka. Konačno jezersko skladište podataka bi trebalo imati
 strukturu direktorija i datoteka prikazano na
 slici~(\ref{figure:lakehouse_directory_structure}). U nastavku je opisan
-postupak izrade Jezerskog Skladišta Podataka i dimenzijskog modela podataka.
+postupak izrade jezerskog skladišta podataka i dimenzijskog modela podataka.
 
 \begin{figure}
     \centering
@@ -86,25 +86,25 @@ postupak izrade Jezerskog Skladišta Podataka i dimenzijskog modela podataka.
         ]
     ]
     \end{forest}
-    \caption{Struktura direktorija i datoteka u primjeru jednostavnog Jezerskog Skladišta Podataka.}
+    \caption{Struktura direktorija i datoteka u primjeru jednostavnog jezerskog skladišta podataka.}
     \label{figure:lakehouse_directory_structure}
 \end{figure}
 
 \section{Unos podataka u brončani sloj} \label{section:unos_podataka_u_broncani_sloj}
 
-Programski kod~(\ref{lst:bronze_data}) prikazuje dio skripte koja stvara tablicu
-`bronze\_data' u Jezerskom Skladištu Podataka. Za čitanje sirovih podataka
+Programski kod~(\ref{lst:bronze_data}) prikazuje dio skripte koja gradi tablicu
+`bronze\_data' u jezerskom skladištu podataka. Za čitanje sirovih podataka
 koristi se funkcija \texttt{read\_raw\_data} koja koristi Sparkov DataFrameReader 
 klasu za čitanje podataka iz datoteke \texttt{sample\_data.csv}. Nakon čitanja
 sirovih podataka dodaju se polja `batch\_date' i `input\_file' koja se koriste za
-praćenje podataka kroz Jezersko Skladište Podataka. Polje `batch\_date' sadrži
-datum kada su podaci učitani u Jezersko Skladište Podataka, a polje
+praćenje podataka kroz jezersko skladište podataka. Polje `batch\_date' sadrži
+datum kada su podaci učitani u jezersko skladište podataka, a polje
 `input\_file' sadrži naziv datoteke iz koje su podaci učitani. Nakon dodavanja
-polja podaci se zapisuju u Jezersko Skladište Podataka u tablicu `bronze\_data'.
+polja podaci se zapisuju u jezersko skladište podataka u tablicu `bronze\_data'.
 
 \begin{lstlisting}[
     language=Python, 
-    caption={Dio skripte koja stvara tablicu `bronze\_data' u Jezerskom Skladištu Podataka.}, 
+    caption={Dio skripte koja gradi tablicu `bronze\_data' u jezerskom skladištu podataka \citep{simplelakehouse2023}.}, 
     label={lst:bronze_data},
     basicstyle=\footnotesize
 ]
@@ -138,25 +138,25 @@ write_to_lakehouse(
 
 \section{Unos podataka u srebrni sloj} \label{section:unos_podataka_u_srebrni_sloj}
 
-Kod unosa podatak u srebrni sloj potrebno je kreirati dimenzijske tablice i 
+Kod unosa podataka u srebrni sloj potrebno je napraviti dimenzijske tablice i 
 činjeničnu tablicu. Programski kod~(\ref{lst:fact_table}) prikazuje dio
-skripte koja stvara tablicu `fact\_table' u Jezerskom Skladištu Podataka. Za
-kreiranje tablice `fact\_table' potrebno je učitati podatke iz tablice
+skripte koja gradi tablicu `fact\_table' u jezerskom skladištu podataka. Za
+izradu tablice `fact\_table' potrebno je učitati podatke iz tablice
 `bronze\_data' i kreirati dimenzijske tablice `person', `country' i `colour'. 
-Dimenzijske tablice se kreiraju tako da se iz tablice `bronze\_data' izvuku
+Dimenzijske tablice se grade tako da se iz tablice `bronze\_data' izvuku
 potrebni stupci i uklone duplikati. Nakon toga se dimenzijskim tablicama dodaju
 surogatni ključevi. Surogatni ključevi se dodaju tako da se dimenzijske tablice
 mogu spajati s činjeničnom tablicom samo preko jednog stupca. Nakon dodavanja
 surogatnih ključeva dimenzijske tablice se spajaju s tablicom `bronze\_data'. 
 Iz tablice dobivene spajanjem se odabiru samo potrebni stupci. Potrebni stupci
 su surogatni ključevi dimenzijskih tablica, datumski stupci i mjere. Nakon
-odabira stupaca tablica se zapisuje u Jezersko Skladište Podataka u tablicu
-`fact\_table'. Opisani postupak za kreiranje činjenične tablice prikazan je u
+odabira stupaca tablica se zapisuje u jezersko skladište podataka u tablicu
+`fact\_table'. Opisani postupak za kreiranje činjenične tablice izradi je u
 programskom kodu~(\ref{lst:fact_table}). 
 
 \begin{lstlisting}[
     language=Python, 
-    caption={Dio skripte koja stvara tablicu `fact\_table' u Jezerskom Skladištu Podataka.}, 
+    caption={Dio skripte koja stvara tablicu `fact\_table' u jezerskom skladištu podataka \citep{simplelakehouse2023}.}, 
     label={lst:fact_table},
     basicstyle=\footnotesize
 ]
@@ -200,13 +200,13 @@ write_to_lakehouse(
 
 \section{Unos podataka u zlatni sloj} \label{section:unos_podataka_u_zlatni_sloj}
 
-Kod unosa podataka u zlatni sloj potrebno je kreirati tablice
+Kod unosa podataka u zlatni sloj potrebno je napraviti tablice
 `most\_bought\_colour\_per\_month', `person\_spent' i `spent\_per\_day'.
-Programski kod~(\ref{lst:spent_per_day}) prikazuje dio skripte koja stvara
-tablicu `spent\_per\_day' u Jezerskom Skladištu Podataka. Za kreiranje tablice
+Programski kod~(\ref{lst:spent_per_day}) prikazuje dio skripte koja gradi
+tablicu `spent\_per\_day' u jezerskom skladištu podataka. Za izradu tablice
 `spent\_per\_day' potrebno je učitati podatke iz tablice `fact\_table' i
 izračunati ukupan iznos potrošen po danu. Nakon izračuna ukupnog iznosa
-potrošenog po danu tablica se zapisuje u Jezersko Skladište Podataka u tablicu
+potrošenog po danu tablica se zapisuje u jezersko skladište podataka u tablicu
 `spent\_per\_day'. Za tablice `most\_bought\_colour\_per\_month' i
 `person\_spent' postupak je sličan kao i za tablicu `spent\_per\_day'. Postupak
 se ralikuje po načinu računanju mjera i potrebnih dodatnih dimenzijskih tablica.
@@ -216,7 +216,7 @@ x-osi se nalazi datum, a na y-osi se nalazi ukupan iznos potrošen po danu.
 
 \begin{lstlisting}[
     language=Python, 
-    caption={Dio skripte koja stvara tablicu `spent\_per\_day' u Jezerskom Skladištu Podataka.}, 
+    caption={Dio skripte koja gradi tablicu `spent\_per\_day' u jezerskom skladištu podataka \citep{simplelakehouse2023}.}, 
     label={lst:spent_per_day},
     basicstyle=\footnotesize
 ]
