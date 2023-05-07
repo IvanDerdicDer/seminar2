@@ -6,8 +6,10 @@ ostvarivanje Sloja Obrade Podataka korišten je Apache Spark
 (poglavlje~(\ref{section:spark})), a za ostvarivanje Sloja Skladištenja Podataka
 korišten je Delta Lake (poglavlje~(\ref{section:delta_lake})). Za ostvarivanje
 Sloja Unosa Podata mogao se koristiti Apache Airflow, Azure Data Factory ili
-neki slični alat. U ovom primjeru nije realiziran Sloj Unosa Podataka pošto je
-smatrano da nije potreban za razumijevanje Jezerskog Skladišta Podataka.
+neki slični alat. U ovom primjeru nije realiziran Sloj Unosa Podataka pošto bi
+se sveo na kopiranje podataka iz jednog direktorija u drugi. U nastavku je
+opisan postupak izrade Jezerskog Skladišta Podataka i dimenzijskog modela
+podataka.
 
 \section{Opis zadatka} \label{section:opis_zadatka}
 
@@ -22,7 +24,7 @@ iz podataka sa sljedećom strukturom:
     \item[colour] tekst,
     \item[currency] tekst.      
 \end{description}
-Dana struktura podataka je struktura sirovih podataka. Sirovi podaci kreirani su
+Dana struktura podataka je struktura sirovih podataka. Sirovi podaci su kreirani
 pomoću stranice \href{https://generatedata.com/}{\textit{generatedata.com}}. Sirovi
 podaci su u CSV formatu i nalaze se u datoteci \texttt{sample\_data.csv} u
 direktoriju \texttt{data} kako je prikazano na
@@ -39,7 +41,7 @@ strukturu direktorija i datoteka prikazano na
 slici~(\ref{figure:lakehouse_directory_structure}). U nastavku je opisan
 postupak izrade Jezerskog Skladišta Podataka i dimenzijskog modela podataka.
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \footnotesize
     \begin{forest}
