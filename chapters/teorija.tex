@@ -28,7 +28,7 @@ podataka vidjeti \cite{datalakehouse2022}.
 
 \section{Sloj unosa podataka} \label{section:sloj_unosa_podataka}
 
-sloj unosa podataka (engl. Data Ingestion Layer) u jezerskom skladištu podataka
+Sloj unosa podataka (engl. Data Ingestion Layer) u jezerskom skladištu podataka
 je sloj koji se koristi za prikupljanje i spremanje podataka iz različitih
 izvora u jezersko skladište podataka. Ovaj sloj obuhvaća dva načina prikupljanja
 podataka:
@@ -37,7 +37,7 @@ podataka:
     \item strujno prikupljanje podataka.
 \end{enumerate}
 
-sloj unosa podataka omogućuje podatkovnim inženjerima da učinkovito prikupe
+Sloj unosa podataka omogućuje podatkovnim inženjerima da učinkovito prikupe
 podatke iz različitih izvora i formata, poput baza podataka, datoteka ili
 senzorskih uređaja, te ih jednostavno učitaju u jezersko skladište podataka.
 Ovaj sloj obično uključuje alate za obradu velikih količina podataka, poput
@@ -64,24 +64,24 @@ Podaci u sloju pohrane podataka se dijele na tri razine:
     \item \textbf{analizirani podaci / zlatni sloj} - podaci koji su analizirani i spremljeni u agregiranom obliku.
 \end{itemize}
 
-sloj pohrane podataka u jezerskom skladištu podataka mora biti oblikovan i
+Sloj pohrane podataka u jezerskom skladištu podataka mora biti oblikovan i
 konfiguriran na način koji omogućuje brzi i jednostavan pristup podacima za
 analizu, uz osiguravanje pouzdanosti, sigurnosti i skalabilnosti skladišta. Za
 detaljni opis sloja pohrane podataka vidjeti \cite{datalakehouse2022}.
 
-\section{Sloj obrade podataka} \label{section:sloj_obrade_podataka} sloj obrade
-podataka (eng. Data Processing Layer) u jezerskom skladištu podataka odnosi se
-na skup tehnologija i alata koji omogućuju obradu velikih količina podataka
-pohranjenih u jezerskom skladištu podataka. Ovaj sloj obično uključuje
-distribuirane obradne okvire, poput Apache Sparka, Apache Flinka i Apache
-Beama.
+\section{Sloj obrade podataka} \label{section:sloj_obrade_podataka} 
 
-sloj obrade podataka je dizajniran kako bi omogućio izvođenje različitih
+Sloj obrade podataka (eng. Data Processing Layer) u jezerskom skladištu podataka
+odnosi se na skup tehnologija i alata koji omogućuju obradu velikih količina
+podataka pohranjenih u jezerskom skladištu podataka. Ovaj sloj obično uključuje
+distribuirane obradne okvire, poput Apache Sparka, Apache Flinka i Apache Beama.
+
+Sloj obrade podataka je dizajniran kako bi omogućio izvođenje različitih
 operacija na podacima, uključujući čišćenje, transformiranje, spajanje i
 agregiranje. Ovaj sloj omogućuje korisnicima da lako i učinkovito izvode složenu
 obradu velikih skupova podataka, koristeći alate za distribuiranu obradu.
 
-sloj obrade podataka u jezerskom skladištu podataka igra ključnu ulogu u
+Sloj obrade podataka u jezerskom skladištu podataka igra ključnu ulogu u
 omogućavanju pouzdane, skalabilne i brze obrade podataka pohranjenih u jezerskom
 skladištu podataka, što omogućuje korisnicima da izvuku vrijednost iz podataka i
 donose informirane poslovne odluke. Za detaljni opis sloja obrade podataka
@@ -90,8 +90,8 @@ vidjeti \cite{datalakehouse2022}.
 \section{Arhitektura i tok podataka} \label{section:arhitektura_i_tok_podataka}
 
 Arhitektura jezerskog skladišta podataka prikazana je na
-slici~(\ref{figure:datalakehouse_architecture}). Ona proizlazi iz slojeva opisanih
-u
+slici~(\ref{figure:datalakehouse_architecture}). Ona proizlazi iz slojeva
+opisanih u
 poglavljima~(\ref{section:sloj_unosa_podataka}),~(\ref{section:sloj_pohrane_podataka})
 i~(\ref{section:sloj_obrade_podataka}). Sloj unosa podataka samo upisuje podatke
 u sloj pohrane pohrane podataka, dok sloj obrade podataka čita i piše podatke u
